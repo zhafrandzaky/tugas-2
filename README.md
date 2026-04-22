@@ -4,14 +4,14 @@ Aplikasi web interaktif untuk mempelajari dan mensimulasikan **Finite State Auto
 
 > **Dibuat oleh:** Zionly
 
-## ✨ Fitur
+## Fitur
 
 - **Tutorial lengkap** — Penjelasan konsep FSA mulai dari definisi, komponen 5-tupel, diagram transisi, tabel transisi, DFA vs NFA, hingga cara kerja membaca string
 - **3 Soal DFA interaktif** — Masing-masing dilengkapi diagram transisi, tabel transisi, dan simulator uji string
 - **Simulasi animasi** — Visualisasi jejak eksekusi langkah per langkah pada canvas
 - **Uji string** — Masukkan string sembarang dan lihat apakah diterima atau ditolak oleh DFA
 
-## 🗂️ Struktur Soal
+## Struktur Soal
 
 | Soal   | Jenis                    | Deskripsi                       |
 | ------ | ------------------------ | ------------------------------- |
@@ -19,9 +19,9 @@ Aplikasi web interaktif untuk mempelajari dan mensimulasikan **Finite State Auto
 | Soal 2 | Tabel → Diagram Transisi | DFA atas `{a,b}` dengan 3 state |
 | Soal 3 | Tabel → Diagram Transisi | DFA atas `{a,b}` dengan 4 state |
 
-## 🚀 Menjalankan Lokal
+## Menjalankan Lokal
 
-**Prasyarat:** Node.js ≥ 18
+**Prasyarat:** Node.js >= 18
 
 ```bash
 # Clone repo
@@ -37,7 +37,7 @@ npm run dev
 
 Buka browser di `http://localhost:5173`
 
-## 🏗️ Build untuk Produksi
+## Build untuk Produksi
 
 ```bash
 npm run build
@@ -45,7 +45,7 @@ npm run build
 
 Output akan ada di folder `dist/`.
 
-## ☁️ Deploy ke Vercel
+## Deploy ke Vercel
 
 1. Push project ini ke GitHub
 2. Buka [vercel.com](https://vercel.com) → **New Project** → Import repo
@@ -55,18 +55,23 @@ Output akan ada di folder `dist/`.
     - **Output Directory:** `dist`
 4. Klik **Deploy**
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - [React 18](https://react.dev/) — UI library
 - [Vite 5](https://vitejs.dev/) — Build tool & dev server
+- [lucide-react](https://lucide.dev/) — Icon library
 - HTML5 Canvas — Rendering diagram FSA
 
-## 📁 Struktur File
+## Struktur File
 
 ```
 tugas-2/
-├── fsa_tutorial_sim.jsx   # Komponen utama (App + semua subcomponent)
 ├── src/
+│   ├── components/        # React components
+│   ├── data/              # Theory & DFA data
+│   ├── styles/            # Shared style objects
+│   ├── utils/             # Canvas drawing utilities
+│   ├── App.jsx            # Root component & routing
 │   └── main.jsx           # Entry point React
 ├── index.html             # HTML entry point
 ├── vite.config.js         # Konfigurasi Vite
@@ -74,7 +79,7 @@ tugas-2/
 └── .gitignore
 ```
 
-## 📚 Referensi
+## Referensi
 
 - Sipser, M. (2012). _Introduction to the Theory of Computation_ (3rd ed.)
 - Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2006). _Introduction to Automata Theory, Languages, and Computation_
